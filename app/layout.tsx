@@ -6,9 +6,9 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Assistants API Quickstart",
-  description: "A quickstart template using the Assistants API with OpenAI",
+  description: "Vælkomin",
   icons: {
-    icon: "/openai.svg",
+    icon: "/favicon.ico",
   },
 };
 
@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         {assistantId ? children : <Warnings />}
-        <img className="logo" src="/openai.svg" alt="OpenAI Logo" />
+        <img className="logo" src="/favicon.ico" alt="OpenAI Logo" />
       </body>
     </html>
   );

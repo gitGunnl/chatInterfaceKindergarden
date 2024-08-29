@@ -5,16 +5,13 @@ import styles from "./page.module.css";
 
 const Home = () => {
   const categories = {
-    "Basic chat": "basic-chat",
-    "Function calling": "function-calling",
-    "File search": "file-search",
-    All: "all",
+    "Býrja": "basic-chat",
   };
 
   return (
     <main className={styles.main}>
       <div className={styles.title}>
-        Explore sample apps built with Assistants API
+        Vælkomin
       </div>
       <div className={styles.container}>
         {Object.entries(categories).map(([name, url]) => (

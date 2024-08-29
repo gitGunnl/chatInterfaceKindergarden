@@ -82,9 +82,14 @@ const Chat = ({
       });
       const data = await res.json();
       setThreadId(data.threadId);
+  
+      // Send the welcome message
+      const welcomeMessage = "Vælkomin, skula vit býrja?";
+      setMessages([{ role: "assistant", text: welcomeMessage }]);
     };
     createThread();
   }, []);
+  
 
   const sendMessage = async (text) => {
     const response = await fetch(
@@ -265,7 +270,7 @@ const Chat = ({
           className={styles.input}
           value={userInput}
           onChange={(e) => setUserInput(e.target.value)}
-          placeholder="Enter your question"
+          placeholder="Skriva her"
         />
         <button
           type="submit"
